@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wander's Tale — Travel Blog</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    header,
+    footer {
+      background: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.25rem 0.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+      /* hover color */
+      transform: scale(1.1);
+    }
+
+    nav a.active {
+      color: #ff6600;
+      /* active color */
+      font-weight: bold;
+      border-bottom: 2px solid #ff6600;
+    }
+
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .post {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-body {
+      padding: 0.5rem 1rem;
+    }
+
+    .post-title {
+      margin: 0.5rem 0;
+      color: #ff5722;
+    }
+
+    @media(min-width: 768px) {
+      .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(min-width: 1024px) {
+      .posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .content-sidebar {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .categories ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .categories a {
+      text-decoration: none;
+      color: #006666;
+    }
+
+    footer .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    footer .insta-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+
+    footer p {
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 18px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><i>Wander's Tale</i></h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#insta">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+
+    <section class="featured">
+      <figure class="featured-figure">
+        <img src="Mountain Sunrize.jpg" alt="Mountain sunrise over valley">
+        <figcaption class="featured-caption">
+          <h2>Chasing Sunrises: A Week in the Highlands</h2>
+          <p>How waking up early transformed my trip — routes, tips, and photo spots for memorable dawns.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <div class="content-sidebar">
+      <section class="posts">
+        <h2 class="section-title" id="posts">Recent Posts</h2>
+        <div class="posts-grid">
+
+          <!-- Post 1 -->
+          <article class="post" id="city">
+            <img src="POST 1.jpg" alt="City street at night" height="500">
+            <div class="post-body">
+              <h3 class="post-title">Night Markets & Neon Streets</h3>
+              <p class="post-excerpt">
+                Wander through vibrant night markets where the scent of sizzling street food fills the air, neon signs
+                light up narrow alleyways, and every corner offers a new flavor to discover. This guide covers the best
+                stalls for local delicacies, unique souvenirs, and the cultural history behind these bustling nocturnal
+                hubs.
+              </p>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="post" id="beach">
+            <img src="Post 2.jpg" alt="Tropical beach with palm trees" height="500">
+            <div class="post-body">
+              <h3 class="post-title">Secret Beaches off the Beaten Path</h3>
+              <p class="post-excerpt">
+                Hidden beyond rocky trails and mangrove forests are beaches untouched by mass tourism. Discover
+                crystal-clear waters, powdery sand, and quiet coves perfect for a peaceful swim or afternoon picnic. We
+                share detailed directions, safety tips, and how to protect these fragile ecosystems while you visit.
+              </p>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="post">
+            <img src="Post 3.jpg" alt="Hiking trail with mountain view" height="500">
+            <div class="post-body">
+              <h3 class="post-title">A Beginner’s Guide to Hill Trekking</h3>
+              <p class="post-excerpt">
+                From selecting the right gear to pacing yourself on steep inclines, hill trekking can be a
+                transformative experience for first-timers. Learn how to prepare physically, choose beginner-friendly
+                routes, and make the most of your journey with tips on photography, camping, and connecting with local
+                communities along the way.
+              </p>
+            </div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="post" id="fest">
+            <img src="Post 4.webp" alt="Colorful cultural festival" height="500">
+            <div class="post-body">
+              <h3 class="post-title">Festival Season: What to Expect</h3>
+              <p class="post-excerpt">
+                Festivals are windows into a region’s culture — from vibrant parades and music-filled streets to
+                traditional dances and artisanal crafts. This post helps you navigate the busiest celebrations,
+                understand cultural etiquette, and capture moments that truly reflect the spirit of the festivities.
+              </p>
+            </div>
+          </article>
+
+          <!-- Post 5 -->
+          <article class="post">
+            <img src="Post 5.jpeg" alt="Open road winding through hills" height="500">
+            <div class="post-body">
+              <h3 class="post-title">The Ultimate Road-trip Playlist & Stops</h3>
+              <p class="post-excerpt">
+                Road trips aren’t just about reaching a destination — they’re about the little stops, the music that
+                fuels your drive, and the stories you collect along the way. We’ve mapped out scenic routes, charming
+                roadside diners, and a curated playlist that keeps the energy high from sunrise to sunset.
+              </p>
+            </div>
+          </article>
+
+          <!-- Post 6 -->
+          <article class="post" id="cafe">
+            <img src="Post 6.webp" alt="Cozy café with books" height="500">
+            <div class="post-body">
+              <h3 class="post-title">Cafés Around the World for Digital Nomads</h3>
+              <p class="post-excerpt">
+                For those who work on the move, the right café can feel like home. We explore coffee shops from bustling
+                urban centers to quiet coastal towns, reviewing their Wi-Fi speed, seating comfort, menu variety, and
+                the ambiance that makes them perfect spots for productivity — or daydreaming.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <aside class="sidebar" aria-labelledby="sidebar-title">
+        <div class="bio">
+          <h2 id="about">About the Blogger</h2>
+          <img class="avatar" src="Aurthur Regans.jpg" alt="Author portrait" height="200">
+          <p>Hi, I'm Aurthur Regans — a weekend wanderer who loves small towns, great coffee, and sunrise photos. I
+            share
+            practical tips and honest travel stories.</p>
+        </div>
+
+        <div class="categories">
+          <h4>Genre of Photos</h4>
+          <ul>
+            <li><a href="#city">City Guides</a></li>
+            <li><a href="#beach">Outdoor</a></li>
+            <li><a href="#cafe">Food & Drink</a></li>
+            <li><a href="#fest">Festivals</a></li>
+          </ul>
+        </div>
+
+        <div class="subscribe-small">
+          <h4>Stay Updated</h4>
+          <p>Get occasional emails about new posts.</p>
+          <form class="mini-newsletter" action="#" method="post" novalidate>
+            <label for="mini-email">Email</label>
+            <input id="mini-email" type="email" placeholder="you@example.com" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="instagram">
+        <h4 id="insta">Instagram</h4>
+        <div class="insta-grid">
+          <img src="POST 1.jpg" alt="Instagram image 1" height="200">
+          <img src="Post 2.jpg" alt="Instagram image 2" height="200">
+          <img src="Post 3.jpg" alt="Instagram image 3" height="200">
+          <img src="Post 4.webp" alt="Instagram image 4" height="200">
+          <img src="Post 5.jpeg" alt="Instagram image 5" height="200">
+          <img src="post 10.jpg" alt="Instagram image 6" height="200">
+          <img src="ipost 7.jpg" alt="Instagram image 7" height="200">
+          <img src="ipost 8.avif" alt="Instagram image 8" height="200">
+          <img src="post 9.avif" alt="Instagram image 9" height="50" width="200">
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h4>Newsletter</h4>
+        <p>Sign up for travel tips & hidden gems.</p>
+        <form class="newsletter-form" action="#nltr" method="post" novalidate>
+          <label for="email">Email address</label>
+          <input id="email" type="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      <p>© <span id="year"></span> Wander's Tale — All rights reserved</p>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <button id="scrollTopBtn">↑</button>
+
+  <script>
+    // Scroll-to-top button behavior
+    const btn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+
+</html>
